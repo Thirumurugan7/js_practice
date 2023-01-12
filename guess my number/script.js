@@ -12,6 +12,18 @@ const scoreHandler = function () {
     document.querySelector('.message').textContent = 'You lost!';
   }
 };
+
+const againHandler = function () {
+  document.querySelector('.message').textContent = 'Start Guessing';
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.number').style.width = '15rem';
+  document.querySelector('.guess').value = '';
+};
+
+const again = document
+  .querySelector('.again')
+  .addEventListener('click', againHandler);
+
 const handler = function () {
   console.log('clicked');
   let guess = document.querySelector('.guess').value;
